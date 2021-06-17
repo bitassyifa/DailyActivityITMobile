@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".screen.kegiatan.DetailKegiatan">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detail Kegiatan"
+            android:gravity="center"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            android:textColor="@color/color4"
+            android:fontFamily="serif"
+            android:layout_marginBottom="25dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/border">
+            <TextView
+               android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ID"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/border">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Klien"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/user_klien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+
+        //OPEN
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/border">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aktivitas Open"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/aktivitas_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Open"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/tanggal_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Foto Aktifitas Awal"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <ImageView
+                android:layout_margin="5dp"
+                android:id="@+id/foto_awal"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        //PROSES
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/border">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aktivitas Proses"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/aktivitas_proses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Proses"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/tanggal_proses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Foto Aktifitas Proses"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <ImageView
+                android:layout_margin="5dp"
+                android:id="@+id/foto_proses"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        //SOLVED
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/border">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aktivitas Solved"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/aktivitas_solved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Solved"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/tanggal_solved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Foto Aktifitas Solved"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <ImageView
+                android:layout_margin="5dp"
+                android:id="@+id/foto_solved"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        //CLOSE
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/border">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aktivitas Close"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/aktivitas_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Close"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_margin="5dp"
+                android:id="@+id/tanggal_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Foto Aktifitas Close"
+                android:layout_weight="2"
+                android:textSize="15sp" />
+            <ImageView
+                android:layout_margin="5dp"
+                android:id="@+id/foto_close"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

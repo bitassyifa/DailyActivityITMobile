@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen.kegiatan.AddTypeActivity"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <soup.neumorphism.NeumorphTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:outlineSpotShadowColor="@color/color2"
+                android:padding="5dp"
+                android:text="Type Kegiatan RKT"
+                android:textColor="@color/color5"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_shadowColorDark="@color/background"
+                app:neumorph_shadowColorLight="@color/background"
+                tools:layout_editor_absoluteX="100dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+            //id activity
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:neumorph_shadowElevation="4dp"
+                    app:neumorph_shapeType="pressed">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="ID Activity"
+                            android:textSize="14dp" />
+
+                        <soup.neumorphism.NeumorphTextView
+                            android:layout_weight="1"
+                            android:id="@+id/id_activity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint=""
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="14sp"
+                            app:met_clearButton="true"
+                            app:met_floatingLabel="highlight"
+                            app:met_floatingLabelPadding="3dp"
+                            app:met_floatingLabelTextSize="11sp"
+                            app:met_hideUnderline="true" />
+                    </LinearLayout>
+                </soup.neumorphism.NeumorphCardView>
+            </LinearLayout>
+
+        // rkt
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <soup.neumorphism.NeumorphCardView
+                            style="@style/Widget.Neumorph.CardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:neumorph_shadowElevation="4dp"
+                            app:neumorph_shapeType="pressed">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="RKT"
+                                    android:textSize="14dp"
+                                    android:layout_marginTop="15dp"/>
+
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                      android:outlineSpotShadowColor="@color/black"
+                                        android:layout_width="match_parent"
+                                        android:autofillHints="Pilih Kegiatan"
+                                        android:layout_height="50dp"
+                                        android:id="@+id/kegiatan_rkt"
+                                        android:layout_weight="1"
+                                        android:textAlignment="center"/>
+
+                            </LinearLayout>
+                        </soup.neumorphism.NeumorphCardView>
+                    </LinearLayout>
+            //id activity
+            <LinearLayout
+                android:id="@+id/wadah_nominal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:neumorph_shadowElevation="4dp"
+                    app:neumorph_shapeType="pressed">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Nominal"
+                            android:textSize="14dp" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:layout_weight="1"
+                            android:id="@+id/nominal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint=""
+                            android:inputType="number"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="14sp"
+                            app:met_clearButton="true"
+                            app:met_floatingLabel="highlight"
+                            app:met_floatingLabelPadding="3dp"
+                            app:met_floatingLabelTextSize="11sp"
+                            app:met_hideUnderline="true" />
+                    </LinearLayout>
+                </soup.neumorphism.NeumorphCardView>
+            </LinearLayout>
+
+        </LinearLayout>
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/btn_addType"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:drawableStart="@drawable/ic_save"
+            android:drawableTint="@color/color5"
+            android:fontFamily="serif"
+            android:text="Save"
+            android:textColor="@color/color5"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+            app:neumorph_shadowElevation="3dp"
+            app:neumorph_shapeAppearance="@style/ButtonShapeAppearance" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/type_kegiatan_rec"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btn_addType" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

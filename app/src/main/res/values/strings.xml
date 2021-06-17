@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Daily Activity Bit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shared_preference_name">com.projectassyifa.shared.preference</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_method_key">LOGIN_METHOD</string>
+    <string name="id_pegawai">Id Pegawai</string>
+    <string name="nama_pegawai">Nama Pegawai</string>
+    <string name="nip">NIP</string>
+    <string name="foto">Foto Pegawai</string>
+    <string name="no_tlp">Nomer Tlp</string>
+    <string name="unit">UNIT</string>
+    <string name="agent">agent</string>
+    <string name="default_value">Null</string>
+    <string-array name="gender">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+</resources>
