@@ -38,4 +38,8 @@ class NetworkModul {
     fun provideDataTypeAPI(): DataTypeAPI {
         return Connect.urlGlobal().create(DataTypeAPI::class.java)
     }
+    @Provides
+    fun provideUpdateStatusAPI(): UpdateStatusAPI {
+        return Connect.urlGlobal().create(UpdateStatusAPI::class.java)
+    }
 }

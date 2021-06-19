@@ -1,5 +1,6 @@
 package com.projectassyifa.dailyactivitybit.data.user.adapter
 
+import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -7,18 +8,17 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Filter
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.projectassyifa.dailyactivitybit.R
 import com.projectassyifa.dailyactivitybit.data.user.model.UserClientModel
-import tech.hibk.searchablespinnerlibrary.SearchableItem
-import tech.hibk.searchablespinnerlibrary.SearchableListAdapter
+
 import java.util.*
 import kotlin.collections.ArrayList
 
-class AdapterListEmployee (val context: Context,var dataSource :List<UserClientModel>) : BaseAdapter(){
+//
+class AdapterListEmployee (var dataSource :List<UserClientModel>,val context: Context) : BaseAdapter(){
     private val  inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-//    var searchlistItems : MutableList<UserClientModel>? = null
-//    var suggestions : MutableList<UserClientModel> = ArrayList()
-//    var filter : SearchableListAdapter.CustomFilter? = null
+
 
     override fun getCount(): Int {
         return  dataSource.size
@@ -32,7 +32,7 @@ class AdapterListEmployee (val context: Context,var dataSource :List<UserClientM
         return position.toLong()
     }
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
        val view : View
        val vh : ItemHolder
        if (convertView == null) {
@@ -43,7 +43,11 @@ class AdapterListEmployee (val context: Context,var dataSource :List<UserClientM
            view = convertView
            vh= view.tag as ItemHolder
        }
+
+
         vh.nama_pegawai.text = dataSource.get(position).nama_pegawai
+
+        println("LOG ${vh.nama_pegawai.text}")
 //        vh.unit.text = dataSource.get(position).unit
 
         return view
@@ -55,36 +59,26 @@ class AdapterListEmployee (val context: Context,var dataSource :List<UserClientM
             nama_pegawai = row?.findViewById(R.id.nama_pegawai) as TextView
 //            unit = row?.findViewById(R.id.unit) as TextView
         }
-//    }
-//     @JvmName("getFilter1")
-//     fun getFilter(): SearchableListAdapter.CustomFilter? {
-//        return filter
-//    }
-//
-//    inner class CustomFilter : Filter() {
-//        override fun performFiltering(constraint: CharSequence): FilterResults {
-//            suggestions.clear()
-//            constraint.let {
-//                for (i in searchlistItems?.indices!!) {
-//                    if (searchlistItems!![i].nama_pegawai.toLowerCase(Locale.ENGLISH).contains(constraint)) { // Compare item in original searchListItems if it contains constraints.
-//                        suggestions.add(searchlistItems!![i]) // If TRUE add item in Suggestions.
-//                    }
-//                }
-//            }
-//            val results = FilterResults() // Create new Filter Results and return this to publishResults;
-//            results.values = suggestions
-//            results.count = suggestions.size
-//            return results
-//        }
-//
-//        override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-//            if (results != null) {
-//                if (results.count > 0) {
-//                    notifyDataSetChanged()
-//                } else {
-//                    notifyDataSetInvalidated()
-//                }
-//            }
-//        }
     }
 }
+
+//class AdapterListEmployee (val listEmployee : List<UserClientModel> , var activity : Activity)
+//    : RecyclerView.Adapter<EmployeeVH>(){
+//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmployeeVH {
+//        val view = LayoutInflater.from(parent.context).inflate(R.layout.adapter_employee,parent,false)
+//        return EmployeeVH(view)
+//    }
+//
+//    override fun onBindViewHolder(holder: EmployeeVH, position: Int) {
+//            holder.nama_pegawai.text = listEmployee[position].nama_pegawai
+//    }
+//
+//    override fun getItemCount(): Int {
+//        return listEmployee.size
+//    }
+//
+//}
+//
+//class EmployeeVH  (v: View) :RecyclerView.ViewHolder(v){
+//    var nama_pegawai = v.findViewById<TextView>(R.id.nama_pegawai)
+//}

@@ -33,6 +33,8 @@ import com.projectassyifa.dailyactivitybit.data.kegiatan.viewmodel.DataRktViewMo
 import com.projectassyifa.dailyactivitybit.data.kegiatan.viewmodel.InsertActivityViewModel
 import com.projectassyifa.dailyactivitybit.data.user.adapter.AdapterListEmployee
 import com.projectassyifa.dailyactivitybit.data.user.viewmodel.UserClientVM
+import com.toptoche.searchablespinnerlibrary.SearchableListDialog
+import com.zues.searchable_spinner.SearchableSpinner
 import kotlinx.android.synthetic.main.activity_insert_daily.*
 import pl.aprilapps.easyphotopicker.DefaultCallback
 import pl.aprilapps.easyphotopicker.EasyImage
@@ -43,6 +45,8 @@ class InsertDailyActivity : AppCompatActivity() {
 
     var selectClient : String? = null
     var dataLogin : SharedPreferences? = null
+
+    var posisi : Int?  = 0
     private val cameraRequestId  = 1222
    @Inject
    lateinit var dataRktViewModel: DataRktViewModel
@@ -81,25 +85,36 @@ class InsertDailyActivity : AppCompatActivity() {
 
         // user client
         userClientVM.dataEmployee?.observe(this, Observer {
+            adapterListEmployee = AdapterListEmployee(it,this)
 
-            adapterListEmployee = AdapterListEmployee(this,it)
+            user_client.setItems(listOf(adapterListEmployee.dataSource))
+//            user_client.adapter = adapterListEmployee
 
-            user_client.adapter = adapterListEmployee
-
+            user_client.setOnItemSelectListener(object : SearchableSpinner.SearchableItemListener {
+                override fun onItemSelected(view: View?, position: Int) {
+                    showToast("Selected")
+                    selectClient = it.get(position).email
+                }
+                override fun onSelectionClear() {
+                    showToast("Selection is clear")
+                }
+                private fun showToast(s: String) {
+                    Toast.makeText(baseContext, s, Toast.LENGTH_SHORT).show()
+                }
+            })
 
             //select
-            user_client.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                    selectClient = it.get(position).email
-
-                }
-
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-
-                }
-
-            }
+//            user_client.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+//                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+//                    selectClient = it.get(position).email
+//                }
+//                override fun onNothingSelected(parent: AdapterView<*>?) {
+//
+//                }
+//
+//            }
         })
+
 
         userClientVM.employee()
 

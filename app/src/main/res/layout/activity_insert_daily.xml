@@ -85,20 +85,23 @@
                         android:textSize="14dp"
                         android:layout_marginTop="15dp"/>
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:outlineSpotShadowColor="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:id="@+id/user_client"
-                        android:layout_weight="1"
-                        android:textAlignment="center"/>
-<!--                    <tech.hibk.searchablespinnerlibrary.SearchableSpinner-->
+<!--                    <androidx.appcompat.widget.AppCompatSpinner-->
 <!--                        android:outlineSpotShadowColor="@color/black"-->
 <!--                        android:layout_width="match_parent"-->
 <!--                        android:layout_height="50dp"-->
 <!--                        android:id="@+id/user_client"-->
 <!--                        android:layout_weight="1"-->
 <!--                        android:textAlignment="center"/>-->
+                    <com.zues.searchable_spinner.SearchableSpinner
+                        android:id="@+id/user_client"
+                        android:layout_width="match_parent"
+                        app:showSearch="true"
+                        app:sort="true"
+                        android:layout_weight="1"
+                        app:label_hint="User Client"
+                        app:label_color="@color/color1"
+                        app:selected_item_color="@color/color5"
+                        android:layout_height="50dp"/>
                 </LinearLayout>
             </soup.neumorphism.NeumorphCardView>
         </LinearLayout>
