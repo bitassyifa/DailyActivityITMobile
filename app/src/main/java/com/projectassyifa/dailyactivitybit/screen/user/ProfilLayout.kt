@@ -64,8 +64,7 @@ class ProfilLayout : Fragment(),View.OnClickListener {
         var linkFoto= "http://202.62.9.138:1234/hrd/php/foto/$foto"
         Picasso.with(context)
             .load(linkFoto)
-            .fit()
-            .centerCrop()
+          
             .placeholder(R.drawable.profil)
             .error(R.drawable.profil)
             .into(profile_image)

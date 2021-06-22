@@ -18,15 +18,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_gravity="center"
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:layout_gravity="center"-->
+<!--            android:id="@+id/profile_image"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:src="@drawable/profil"-->
+<!--            app:civ_border_color="#FFFFFF"-->
+<!--            app:civ_border_width="2dp"-->
+<!--            android:outlineSpotShadowColor="@color/background"/>-->
+        <soup.neumorphism.NeumorphImageView
+            app:neumorph_shapeType="pressed"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:id="@+id/profile_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/profil"
-            app:civ_border_color="#FFFFFF"
-            app:civ_border_width="2dp"
-            android:outlineSpotShadowColor="@color/background"/>
+            android:layout_gravity="center"
+            />
     </soup.neumorphism.NeumorphCardView>
     <soup.neumorphism.NeumorphButton
         android:id="@+id/btn_logout"

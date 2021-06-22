@@ -14,6 +14,7 @@ import com.projectassyifa.dailyactivitybit.R
 import com.projectassyifa.dailyactivitybit.data.kegiatan.model.DataActivityModel
 import com.projectassyifa.dailyactivitybit.screen.kegiatan.AddTypeActivity
 import com.projectassyifa.dailyactivitybit.screen.kegiatan.DetailKegiatan
+import com.projectassyifa.dailyactivitybit.screen.kegiatan.UpdateStatusActivity
 
 class AdapterActivityIT ( val listActivity : List<DataActivityModel>,var activity : Activity)
     : RecyclerView.Adapter<ActivityViewHolder>() {
@@ -29,6 +30,14 @@ class AdapterActivityIT ( val listActivity : List<DataActivityModel>,var activit
         holder.aktivitas.text=listActivity[position].aktifitas
         holder.status.text = listActivity[position].status
 
+        holder.status.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("aktifitas",listActivity[position].aktifitas)
+            bundle.putString("id",listActivity[position].id)
+            val move = Intent(activity,UpdateStatusActivity::class.java)
+            move.putExtras(bundle)
+            activity.startActivity(move)
+        }
         //dtails
         holder.details.setOnClickListener {
             val bundle = Bundle()

@@ -109,6 +109,8 @@ println("DATA TYPE ${data.id_data_activity},${data.id_kegiatan},${data.kegiatan}
         dataTypeVM.dataType?.observe(this,Observer{
             adapterTypeActivity = AdapterTypeActivity(it,this)
             type_kegiatan_rec.adapter = adapterTypeActivity
+
+            println("ADAPTER $adapterTypeActivity")
         })
 
         dataTypeVM.typeAct(bundle?.getString("id").toString())

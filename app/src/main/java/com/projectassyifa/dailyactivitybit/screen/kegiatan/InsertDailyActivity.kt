@@ -7,8 +7,10 @@ import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.FileUtils
 import android.os.Handler
 import android.renderscript.ScriptGroup
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -32,6 +34,7 @@ import com.projectassyifa.dailyactivitybit.data.kegiatan.viewmodel.DataActivityV
 import com.projectassyifa.dailyactivitybit.data.kegiatan.viewmodel.DataRktViewModel
 import com.projectassyifa.dailyactivitybit.data.kegiatan.viewmodel.InsertActivityViewModel
 import com.projectassyifa.dailyactivitybit.data.user.adapter.AdapterListEmployee
+import com.projectassyifa.dailyactivitybit.data.user.model.UserClientModel
 import com.projectassyifa.dailyactivitybit.data.user.viewmodel.UserClientVM
 import com.toptoche.searchablespinnerlibrary.SearchableListDialog
 import com.zues.searchable_spinner.SearchableSpinner
@@ -86,10 +89,24 @@ class InsertDailyActivity : AppCompatActivity() {
         // user client
         userClientVM.dataEmployee?.observe(this, Observer {
             adapterListEmployee = AdapterListEmployee(it,this)
-
-            user_client.setItems(listOf(adapterListEmployee.dataSource))
+            println("IT NIH $it")
+//       user_client.setItems(listOf(adapterListEmployee.dataSource.get(6).nama_pegawai))
 //            user_client.adapter = adapterListEmployee
+//            val employes = listOf(adapterListEmployee)
 
+
+            var jml = adapterListEmployee.dataSource
+            var tampung : ArrayList<String> = ArrayList()
+                jml.forEach {
+//                    println("NAMA PEGAWAI : ${it.nama_pegawai}")
+                    tampung.add(it.nama_pegawai)
+
+//                    println("TAMPUNG $tampung")
+                    user_client.setItems(tampung)
+                }
+//            println("TAMPUNG $tampung")
+
+//       user_client.setItems(employeeList())
             user_client.setOnItemSelectListener(object : SearchableSpinner.SearchableItemListener {
                 override fun onItemSelected(view: View?, position: Int) {
                     showToast("Selected")

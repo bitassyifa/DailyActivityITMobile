@@ -17,7 +17,7 @@ class AdapterTypeActivity (val listType : List<TypeActivityModel>,var activity :
     }
 
     override fun onBindViewHolder(holder: TypeViewHolder, position: Int) {
-        holder.no.text = (position+1).toString()
+//        holder.no.text = (position+1).toString()
         holder.kegiatan.text = listType[position].kegiatan
         holder.nominal.text = listType[position].nominal
     }
@@ -29,7 +29,7 @@ class AdapterTypeActivity (val listType : List<TypeActivityModel>,var activity :
 
 class TypeViewHolder (v: View) :RecyclerView.ViewHolder(v){
 
-    var no = v.findViewById<TextView>(R.id.no)
+//    var no = v.findViewById<TextView>(R.id.no)
     var kegiatan = v.findViewById<TextView>(R.id.kegiatan1)
     var nominal = v.findViewById<TextView>(R.id.nominal)
 

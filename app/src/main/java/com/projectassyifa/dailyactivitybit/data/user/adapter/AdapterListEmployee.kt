@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.projectassyifa.dailyactivitybit.R
 import com.projectassyifa.dailyactivitybit.data.user.model.UserClientModel
+import kotlinx.android.synthetic.main.adapter_employee.view.*
 
 import java.util.*
 import kotlin.collections.ArrayList
@@ -47,9 +48,8 @@ class AdapterListEmployee (var dataSource :List<UserClientModel>,val context: Co
 
         vh.nama_pegawai.text = dataSource.get(position).nama_pegawai
 
-        println("LOG ${vh.nama_pegawai.text}")
-//        vh.unit.text = dataSource.get(position).unit
 
+//        vh.unit.text = dataSource.get(position).unit
         return view
     }
     private class ItemHolder(row: View?) {
@@ -66,6 +66,8 @@ class AdapterListEmployee (var dataSource :List<UserClientModel>,val context: Co
 //    : RecyclerView.Adapter<EmployeeVH>(){
 //    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmployeeVH {
 //        val view = LayoutInflater.from(parent.context).inflate(R.layout.adapter_employee,parent,false)
+//
+//        println("VIEW $view")
 //        return EmployeeVH(view)
 //    }
 //
